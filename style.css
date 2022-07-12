@@ -25,6 +25,8 @@ body {
 .mobile-image,
 .desktop-image {
   width: 100%;
+  min-width: 375px;
+  max-width: 800px;
   height: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -35,7 +37,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 375px;
+  width: 50%;
+  min-width: 375px;
+  max-width: 709px;
   margin: 3rem auto;
 }
 
@@ -102,4 +106,32 @@ body {
 
 .buy-button:hover {
   background-color: hsl(158, 36%, 20%);
+}
+
+@media (min-width: 950px) {
+  .product-card {
+    flex-direction: row;
+    width: 75%;
+  }
+  .mobile-image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: block;
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .description-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2.3rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
 }
